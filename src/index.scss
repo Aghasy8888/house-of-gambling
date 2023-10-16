@@ -1,0 +1,70 @@
+@import "./scss/variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Works on Chrome, Edge, and Safari */
+
+
+body {
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+  background: $navyBlue;
+  section {
+    position: relative;
+  }
+  button div {
+    font-family: "Lexend", sans-serif;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    font-size: 96px;
+  }
+}
+
+@media (max-width: 769px) {
+  body {
+    h2 {
+      font-size: 46px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    main {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 6px;
+    }
+  }
+}
+
+@media (min-width: 1070px) {
+  body {
+    main {
+      margin: 0 70px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    main {
+      margin: 0 140px;
+    }
+  }
+}

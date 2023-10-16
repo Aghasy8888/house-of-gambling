@@ -1,0 +1,39 @@
+.circlesContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 32px;
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .circlesContainer {
+    height: 800px;
+    width: 370px;
+    margin-top: 0;
+    .container {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .circlesContainer {
+    height: 1026px;
+  }
+  
+}
+
+
+
+@media (min-width: 1600px) {
+  .circlesContainer {
+    margin-left: 0;
+    margin-right: 65px;
+  }
+}

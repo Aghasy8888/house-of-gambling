@@ -1,0 +1,121 @@
+@import "../../scss/variables";
+
+header {
+  position: relative;
+  height: 74px;
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    width: unset;
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    margin: auto;
+    background-color: $navyBlue; 
+    z-index: 999;   
+    .logoAndButtonsCtn {
+      position: relative;
+      display: flex;
+      padding: 10px 14px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 64px;
+      border: 2px solid $lightBlue;
+      .logo {
+        background-color: aquamarine;
+        width: 54px;
+        height: 18px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4px;
+        .menuIcon,
+        .xIcon {
+          padding: 4px;
+        }
+      }
+    }
+    .logInBtn,
+    .signUpBtn {
+      display: flex;
+      padding: 13px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 24px;
+      border: 2px solid $purple;
+      background: $deepBlue;
+      width: 100%;
+    }
+
+    .signUpBtn {
+      margin-top: 5px;
+      background: $lightBlue;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  header {
+    height: 120px;
+    nav {
+      right: 6px;
+      left: 6px;
+      top: 16px;
+      max-width: none;
+      margin: auto;
+      .logoAndButtonsCtn {
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 24px;
+        .logo {
+          width: 60px;
+          height: 32px;
+        }
+      }
+      .languageButton {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 1070px) {
+  header {
+    nav {
+      right: 70px;
+      left: 70px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  header {
+    nav {
+      right: 140px;
+      left: 140px;
+      .logoAndButtonsCtn {
+        .logo {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1565px) {
+  header {
+    nav {
+      .logoAndButtonsCtn {
+        padding: 24px 48px;
+        .logo {
+          width: 287px;
+        }
+      }
+    }
+  }
+}

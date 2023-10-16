@@ -1,0 +1,135 @@
+@import "../../scss/variables.scss";
+
+.blog {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 33px;
+  .container {
+    margin: 0 10px;
+    .infoContainer {
+      margin-top: 18px;
+      display: flex;
+      height: 421px;
+      border-radius: 50px;
+      border: 2px solid $lightBlue;
+      background: rgba(255, 255, 255, 0.12);
+      /* Bg Blur 20% */
+      backdrop-filter: blur(10px);      
+      padding: 10px;
+      padding-right: 0;
+      .blogCardsCtn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        overflow-y: scroll;
+        margin-right: 6px;
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        
+        &::-webkit-scrollbar-track {
+          margin-block: 50px;
+          border-radius: 10px;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.121) 0%,
+            rgba(255, 255, 255, 0.121) 12%
+          );;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: $lightBlue;
+          border-radius: 10px;
+        }
+      }
+      .blogCard {
+        display: flex;
+        padding: 15px 35px;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        border-radius: 40px;
+        background: $deepBlue;
+        gap: 6px;
+        margin-right: 6px;
+        p {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 125%;
+        }
+        div {
+          color: rgba(255, 255, 255, 0.6);
+          font-feature-settings: "liga" off;
+          font-size: 14px;
+          font-weight: 450;
+          line-height: 114.286%;
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 125%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .blog {
+    margin: 0;
+    max-width: 300px; 
+    margin-top: 140px;
+    .container {
+      .infoContainer {
+        .blogCard {
+          gap: 14px;
+        }
+      }
+    }
+  }
+  
+}
+
+@media (min-width: 1400px) {
+  .blog {
+    max-width: none;
+    width: 450px;
+    .container {
+      margin: 0;
+      .infoContainer {
+        margin-top: 24px;
+        padding: 24px;
+        height: 595px;
+        border-radius: 100px;
+        .blogCardsCtn {
+          gap: 16px;
+        }
+        .blogCard {
+          padding: 16px 64px;
+          border-radius: 196px;
+          p {
+            font-size: 24px;
+            line-height: 116.667%;
+          }
+          div {
+            margin-top: 14px;
+          }
+        }
+      }
+      h1 {
+        font-size: 40px;
+        line-height: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1815px) {
+  .blog {
+    width: 531px;
+  }
+}

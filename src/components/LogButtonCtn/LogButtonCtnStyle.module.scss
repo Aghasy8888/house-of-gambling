@@ -1,0 +1,42 @@
+@import "../../scss/variables";
+@import "../../scss/main.scss";
+
+.logButtonsCtn {
+  display: flex;
+  gap: 14px;
+  .languageButton {
+    @include flexCenter();
+    @include buttonStyles();
+    padding: 14px;
+    gap: 8px;
+    cursor: pointer;
+  }
+  .languageButton div {
+    @include btnTextStyles();
+  }
+  .loginBtn,
+  .signUpBtn {
+    display: flex;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    @include buttonStyles();
+    div {
+      @include btnTextStyles();
+    }
+  }
+  .signUpBtn {
+    background: $lightBlue;
+  }
+}
+
+
+@media (max-width: 1565px) {
+  .logButtonsCtn {
+    gap: 10px;
+  }
+
+  
+}
+

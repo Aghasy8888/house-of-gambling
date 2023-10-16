@@ -1,0 +1,99 @@
+@import "../../scss/variables";
+@import "../../scss/main.scss";
+
+.TitleAndBtnSection {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 70px;
+  .container {
+    margin: 0 10px;
+    button {
+      @include flexCenter();
+      margin-top: 24px;
+      border-radius: 48px;
+      background: $lightBlue;
+      padding: 15px 20px;
+      gap: 8px;
+      width: 100%;
+      div {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    .raiseYourROI {
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 130%;
+    }
+    .title {
+      color: #fff;
+      text-align: center;
+      font-size: 46px;
+      font-weight: 500;
+      line-height: 108.696%;
+      span {
+        color: $lightBlue;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .TitleAndBtnSection {
+    margin: 0;
+    margin-top: 296px;
+    max-width: 300px;  
+  }
+}
+
+@media (min-width: 1400px) {
+  .TitleAndBtnSection {
+    .container {
+      .title {
+        font-size: 52px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .TitleAndBtnSection {
+    max-width: 500px;
+    .container {
+      margin: 0;
+      button {
+        padding: 20px 72px;
+        width: auto;
+        div {
+          font-size: 24px;
+          line-height: 133.333%;
+        }
+      }
+      .title {
+        text-align: start;
+        font-size: 76px;
+      }
+      .raiseYourROI {
+        text-align: start;
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1815px) {
+  .TitleAndBtnSection {
+    max-width: 700px;
+    .container {
+      .title {
+        font-size: 96px;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import "../../scss/main.scss";
+@import "../../scss/variables.scss";
+
+footer {
+  margin-top: 119px;
+  .container {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 50px 50px 0px 0px;
+    border: 2px solid $lightBlue;
+    background: $navyBlue;
+    .ourSocialMedia {
+      margin-top: 20px;
+      .socialMediaIcons {
+        margin-top: 8px;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      h3 {
+        @include setFooterLinksStyles();
+      }
+    }
+    .linksCtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2px;
+      align-self: stretch;
+      a {
+        @include setFooterLinksStyles();
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  footer {
+    .container {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 40px 30px 24px 30px;
+      .linksCtn {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .ourSocialMedia {
+        .socialMediaIcons {
+          margin-top: 14px;
+        }
+        h3 {
+          text-align: end;
+          position: absolute;
+          top: 40px;
+          right: 30px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    margin-top: 0;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+  footer {
+    .container {
+      .linksCtn {
+        gap: 40px;
+        a {
+          font-size: 16px;
+        }
+      }
+      .ourSocialMedia {
+        .socialMediaIcons {
+          a {
+            img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  footer {
+    .container {
+      padding: 40px 140px 24px 140px;
+      .ourSocialMedia {
+        h3 {
+          right: 140px;
+        }
+      }
+    }
+  }
+}
